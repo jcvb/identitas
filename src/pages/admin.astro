@@ -1,7 +1,7 @@
 ---
 /* STATIC CMS ADMIN PAGE */
 import { menu, page, settings, post, project, product } from "@cms/index.mjs";
-import logo from "@icons/logo.svg";
+import logo from "@assets/logo.png";
 import newsIcon from "@icons/news.svg";
 import pageIcon from "@icons/page.svg";
 import menuIcon from "@icons/menu.svg";
@@ -15,7 +15,7 @@ const url = Astro.site;
 const config = {
   locale: lang,
   site_url: url,
-  logo_url: "https://nebulix.unfolding.io/logo.svg",
+  logo_url: "@assets/logo.png",
   local_backend: true,
   backend: {
     name: "test-repo",
