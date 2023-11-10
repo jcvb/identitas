@@ -2,7 +2,7 @@
 import { marked } from "marked";
 import Intersecting from "@components/common/Intersecting.vue";
 import { Icon } from "astro-icon";
-import { getIconName } from "@util/helpers";
+import { getIconName, getImageUrlPublic } from "@util/helpers";
 const { content, container, features } = Astro.props;
 ---
 
@@ -22,11 +22,9 @@ const { content, container, features } = Astro.props;
             >
               {feature.icon && (
                 <div
-                  class={`${
-                    feature.color || "surface-primary"
-                  } grid h-14 w-14 place-items-center overflow-hidden rounded-full`}
+                  class= "bg-white grid h-20 w-20 place-items-center overflow-hidden rounded-full"
                 >
-                  <Icon name={getIconName(feature.icon)} class={`h-8 w-8 `} />
+                <img src={getImageUrlPublic(feature.icon)} class={`h-14 w-14 `} />
                 </div>
               )}
               <div

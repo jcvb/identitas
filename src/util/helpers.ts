@@ -113,6 +113,11 @@ export function getImageUrl(thumbnail: string | null): string {
 	return `/images/${thumbnail.split('/').pop()!.split('.')[0]}`
 }
 
+export function getImageUrlPublic(thumbnail: string | null): string {
+	if (!thumbnail) return '#'
+	return `/${thumbnail.split('/').pop()!.split('.')[0]}.png`
+}
+
 export function getImageName(thumbnail: string | null): string | null {
 	if (!thumbnail) return null
 	return thumbnail.split('/').pop()!.split('.')[0]
